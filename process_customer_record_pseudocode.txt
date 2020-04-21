@@ -1,0 +1,81 @@
+/**
+q#1. Process customer record
+*/
+
+1. Start
+
+2. //INPUT
+
+3. initialize cust_name for Customer's name
+4. initialize purch_amount for Purchase amount
+5. initialize tax_code for tax code
+6. initialize cont = true to control while loop
+7. initialize tax_percent
+8. initialize array of tax_percents[] for the respective tax codes
+9.
+10. //output variable
+11. initialize sales_tax
+12. initialize total_amount_due
+13.
+14. //prompt user to enter data
+15. Prompt user to enter Customer's name
+16. Scan and assign to variable cust_name
+17.
+18. Pompt user to enter Purchase amount
+19. Scan and assign to variable purch_amount
+20.
+21.     //check if user entered the right tax code and map with respective tax percent
+	//repeatition until user enters the right code number
+22. DO 
+23.	Prompt user to enter tax code [either of 0, 1, 2 or 3 only]
+24.	Scan and assign to variable tax_code	
+		//validate tax code	
+25.     	IF tax_code is between 0 and 3
+26.			FOR LOOP (index=0) 
+27.			make sure index is less than four
+28.
+29.				IF (index equals to tax_code)30.
+30.				//map tax code against tax percent
+31.				tax_percent = tax_percents[index]
+32.				cont = false
+33.
+34.				ELSE
+35.					increament index and go back to FOR LOOP
+36.		
+37.			END FOR LOOP
+38.		ELSE 
+39.			Notify user entered wrong number
+40.		END IF
+41. Go back to DO-WHILE loop above
+42. WHILE (cont is true)
+43. END DO-WHILE
+
+44. //PROCESS
+
+45. sales_tax = purch_amount * tax_number
+46. total_amount_due = salex_tax + purch_amount
+47. Format money values in two decimal places
+48.
+49. //OUTPUT
+50. Print customer's name
+51. Print purchase amount
+52. Print sales tax amount
+53. Print total amount due
+54. end
+
+
+TEST DATA-1
+customer name: { Frederick Gerald Hubert}
+Purchase amount: 125
+tax code: 1
+Result:
+sales tax = 3.75
+total amount due = 128.75
+
+TEST DATA-2
+customer name: { Christopher Columbus}
+Purchase amount: 300
+tax code: 3
+Result:
+sales tax = 21.00
+total amount due = 321.00
